@@ -33,10 +33,15 @@ def search_unique(query):
         artist = metadata["uploader"]
     else:
         artist = None
+    if "duration" in metadata:
+        duration = metadata["duration"]
+    else:
+        duration = 0
+        app.logger.info("No duration detected for {}, from Twitch".format(query))
     album = None
 
     if "thumbnails" in metadata and len(metadata["thumbnails"]) > 0:
-        thumbnail = metadata["thumbnails"][0]
+        thumbnail = metadata["thumbnails"][0]['url']
     else:
         thumbnail = None
     results.append({
@@ -46,7 +51,7 @@ def search_unique(query):
         "album": album,
         "url": query,
         "albumart_url": thumbnail,
-        "duration": 42,
+        "duration": duration,
         "id": metadata["id"]
         })
     # app.logger.info("Results : ")

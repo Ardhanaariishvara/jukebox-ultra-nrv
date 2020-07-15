@@ -146,6 +146,7 @@ LIMIT 1;",
         :param track_form:
         :return:
         """
+
         conn = sqlite3.connect(database)
         c = conn.cursor()
         c.execute("""INSERT INTO track_info

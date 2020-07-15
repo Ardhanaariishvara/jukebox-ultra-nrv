@@ -48,7 +48,8 @@ class Jukebox(Flask):
             self.search_backends.append(importlib.import_module("jukebox.src.backends.search." + i))
 
     def player_worker(self):
-        """Function called in a separate thread managing the mpv player.
+        """
+        Function called in a separate thread managing the mpv player.
         """
         while len(self.playlist) > 0:
             url = self.playlist[0]["url"]

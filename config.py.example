@@ -1,20 +1,34 @@
 # Enable debug flask server
-DEBUG=True
+DEBUG = True
+
 # Listen address. Set to 0.0.0.0 for all interfaces
-LISTEN_ADDR="0.0.0.0"
+LISTEN_ADDR = "0.0.0.0"
+
 # Listen port
-LISTEN_PORT=8080
+LISTEN_PORT = 8080
+
 # Channel used for volume control (see output of amixer)
-AMIXER_CHANNEL="Master"
+AMIXER_CHANNEL = "Master"
+
 # Flask secret encryption key. Do not leave blank
-SECRET_KEY=""
+SECRET_KEY = b'My secret key'
+
 # Path to your sqlite database. Will be created on first run
 DATABASE_PATH = "jukebox.sqlite3"
+
 # Your YouTube API Key. Needed for YouTube searches
-YOUTUBE_KEY=""
-# Enabled search backends
-SEARCH_BACKENDS=[
-  "youtube"
+YOUTUBE_KEY = ""
+
+# Enabled search backends (default : "youtube")
+# Currently supported : "bandcamp", "soundclound", "jamendo", "twitch", "generic"
+SEARCH_BACKENDS = [
+    "youtube"
 ]
+
 # Name of the app
-JK_NAME="Jukebox Ultra NRV MkIII"
+JK_NAME = "Jukebox Ultra NRV MkIII"
+
+## Links to display (eventually) :
+# NAV_LINKS = [
+#   ("Name", "link")
+# ]
