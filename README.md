@@ -4,10 +4,9 @@
 
 This application assumes it runs on Linux using Alsa.
 
-`python3, python-flask, python-requests,  mpv, youtube-dl, alsa-utils,
-python3-pip` have to be installed.
-Also from pip, get `pyalsaaudio`, `youtube_dl`, `passlib`, `flask-WTF` and `flask-table`.
-
+`python3, (python-flask, python-requests, youtube-dl, python3-pip), mpv, alsa-utils, libasound2-dev` have to be installed *(beware for mpv, should be compiled from GitHub as most repos are outdated)*.  
+Also from pip, you will have to get `pyalsaaudio`, `youtube_dl`, `passlib`, `flask-WTF` and `flask-table`.  
+On Ubuntu, you will probably need `python3-dev` and/or `libasound2-dev` to get pyalsaaudio working.
 ## Installation
 
  - Clone the repo

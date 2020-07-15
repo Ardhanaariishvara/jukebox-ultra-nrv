@@ -61,6 +61,7 @@ def help():
 
 
 @main.route("/settings", methods=['GET', 'POST'])
+@requires_auth  #because user is used
 def settings():
     # we should add a modules argument to render_template to
     # display which search functions are available
